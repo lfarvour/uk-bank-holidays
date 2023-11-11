@@ -13,5 +13,12 @@ In particular, setting up `pyenv virtualenv` (virtual environments) is quite sas
 | Integrated Development Environment (IDE) | Visual Studio Code |  IDE's provide everything a person needs to code stuff. They provide suggestions, lint (i.e. grammar check), run tests, enable debugging, and are just generally helpful development pals. | This free IDE is the best thing Microsoft has ever done for the world. It supports development in just about any language you can think of and allows open source development of extensions<sup>1</sup> that make life even easier |
 | Virtual Environment | pyenv virtualenv <br><br> *OR* venv (built into Python base install) | Virtual environments allow developers to create environments for development projects that are separate from the base installation of Python (or any other language). Virtual environments are handy because they ensure that developers can test code using any version of Python they need (e.g. backwards compatibility testing). They also keep the package environments of different projects separate, which ensures that during packaging only minimum necessary packages are included. | Using virtual environments for projects like this one is definitely overkill. However, the process of learning what virtual environments are and how they work is invaluable for when a person is juggling multiple projects with lots of different package requirements, as can quickly happen when code starts flowing. |
 
-
 <sup>1</sup> Practice safe installation of unknown code. VSCode does not sandbox extensions, and they *can* be used to deliver malware. That being said, extensions are generally signed and attributed, discouraging malicious behavior. [This StackOverflow discussion offers more insights](https://stackoverflow.com/questions/67493012/how-safe-are-extensions-in-visual-studio-code).
+
+# Visual Studio Code Extensions
+
+| Extension | Author | Description |
+| -- | -- | -- |
+| Pylint | Microsoft | Grammar checking, for code! Has a configuration file that allows setting tolerances for grammatical errors. For example, setting maximum line lengths to improve code readabillity. |
+| Python Extension Pack | Don Jaymanne | Collection of handy Python extensions, including tab completion, auto docstring, and AI assist for development |
+| Gitlens | Git Kraken | Awesome visualizer for git local and remote source code management visualization |
