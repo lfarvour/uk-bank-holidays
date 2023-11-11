@@ -1,0 +1,14 @@
+'''Place to write pseudocode to plan my project.'''
+
+def http_function(input:input_type) -> output_type:
+    '''DO STUFF
+    
+    Args:
+        input (input_type): brief description
+    Returns:
+        output (output_type): brief description'''
+
+    url = "endpoint_url"
+    response = get(url)
+    return parse(response)
+    
