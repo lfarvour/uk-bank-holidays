@@ -4,15 +4,21 @@ API Endpoint URL: https://www.gov.uk/bank-holidays.json
 
 ## User Story
 
-As a human being who lives in the United States of America, I would like to know more about bank holidays in the United Kingdom. 
+As a human being who lives in the United States of America :us:, I would like to know more about bank holidays in the United Kingdom :uk:.
+
+I know, classic USA-based Americans being obsessed with the UK :rofl:
 
 I would like to know what holidays are honored by banks, whether they need bunting, and what bunting is (I don't know that the API can answer that for us :) ). 
 
-### Your mission, should you choose to accept it...
+### Mission Details
 
-Write a python-backed command-line program that allows the user to ask questions about the data.
+Write a python-backed command-line program that allows the UK obsessed USA user to ask questions about the data.
 
-I recommend reveiwing the table below that describes the project
+I recommend reveiwing all project files before writing any actual code. Good design accounts for the various outcomes expected, and just starting in a linear fashion (as the table below implies is necessary) is not always the best approach.
+
+Suggestions:
+* Read the SEED_QUESTIONS file
+* Visit the endpoint URL to get to know the data. 
 
 Some tasks will have related examples. Keep in mind that there are myriad ways the same task can be completed when solving problems using prgoramming languages -- it's parallel to real life implementation of language. Folks have distinct style, teams have dialects, etc.
 

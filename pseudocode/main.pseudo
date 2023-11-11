@@ -1,5 +1,7 @@
 '''Place to write pseudocode to plan my project.'''
 
+'''NOTE: Python is a top-down interpreting language; that is, the interpreter reads files starting at line 1 and checks for errors before attempting to "enter" program execution.'''
+
 def http_function(input:input_type) -> output_type:
     '''DO STUFF
     
@@ -11,4 +13,27 @@ def http_function(input:input_type) -> output_type:
     url = "endpoint_url"
     response = get(url)
     return parse(response)
-    
+
+
+def main():
+
+    data = http_function(some_input)
+
+
+'''NOTE: It took me ages to really understand what this thing is.
+
+Therefore, I use this pseudocode opportunity to teach!
+
+This is the entry point to your python program when it is delivered as a package.
+
+Think of a python package as a compressed set of files that do python things. Technically, they are not compressed, they are /compiled/.
+
+If you have ever installed a python tool, it is likely it was /packaged/ and has some file that contains the following lines.
+
+When running a packaged python tool at at the command line:
+* The system uses python (base install or virtual environment) to interpret files (interpreter) and execute the program.
+* When the interpreter finds these lines, it knows this is the entry point. The file can be called `whatever.py`. The function can be `def whatever():` instead of main. BUT, this line with the double-underscore (dunder) variable and value MUST be as shown.
+* The line after the dunder variable check calls some function defined above it.
+'''
+if __name__ == "__main__":
+    main()

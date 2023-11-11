@@ -1,9 +1,25 @@
 # Local Development Environment
-To get this up and running, folks will at minimum need Python 3.10 installed on their computers. While having Python installed is technically sufficient to write code, it fails to adopt tools and practices that assist modern developers in moving fast and getting things done. 
+
+> My friend Habiba hates when I start counting at zero. This project was originally designed to support her learning as the intern on our security operations team, thus I start counting at zero as an homage to my dedication to being a silly, obstinate goose.
+
+* [Skip to the Table of Things](0_DEV_ENVIRONMENT.md#table-of-things)
+
+## WORDS: Installing the Language
+
+To get any python project up and running, folks will at minimum need Python installed on their computers. It is recommended to stick to the latest version (3.10 at time of writing). That being said, one can use whichever version of python makes most sense for their use case. 
+
+Most of the libraries/packages that are used in this project will be "Living off the Land" (LOL). That is, you can use libraries/packages that come in a vanilla install. The one exception is `requests`, which is not vanilla but probably the most widely used non-vanilla python package for HTTP-based snek communication. 
+
+`requests` is the reason I recommend using virtual environments up front, because if you install `requests` in your base install of python, it will be included in every future python project you use, whether you need it or not. And as cyber defenders know, `least needed access` is a fundamental security requirement.
+
+## WORDS: Why We Install More Stuff
+While having Python installed is technically sufficient to write code, it fails to adopt tools and practices that assist modern developers in moving fast and getting things done. 
 
 For this reason, I offer the following listing of my local development technology stack. Getting all of these tools working together takes a bit of time, elbow grease, and plenty of Google searching. Perhaps even asking ChatGPT if you get stuck ;)
 
 In particular, setting up `pyenv virtualenv` (virtual environments) is quite sassy. If you encounter a brick wall while setting up your system, I recommend sticking to `venv` for virtual environment creation and management, as it built in natively to Python core.
+
+## Table of Things
 
 | Development Terminology | Recommended Tool | Purpose | Words About It |
 | -- | -- | -- | -- |
