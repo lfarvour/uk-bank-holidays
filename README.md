@@ -15,7 +15,7 @@ The purpose of this project is to teach others what it took me a long time to ge
 
 In this repository, learners will discover opportunities to both build for themselves and learn from what has already been built. 
 
-> Learners are encouraged to [reach out to me](README.md#contact) with questions, requests for code reviews, or anything else that can help move them along. I will always help when I can, and if I cannot I will strive to connect you with folks who can.
+> Learners are encouraged to [reach out to me](CODEOWNERS) with questions, requests for code reviews, or anything else that can help move them along. I will always help when I can, and if I cannot I will strive to connect you with folks who can.
 
 ## Your mission, should you choose to accept it...
 
