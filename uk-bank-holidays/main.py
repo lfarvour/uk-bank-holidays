@@ -6,6 +6,7 @@ import argparse
 from pathlib import Path
 
 # Imports for data typing
+from datetime import datetime
 from pathlib import PosixPath
 from argparse import ArgumentParser
 from typing import Union
@@ -15,7 +16,8 @@ from models.uk_holidays import UkRegion
 
 # DEFINE CONSTANTS
 UK_HOLIDAY_ENDPOINT = "https://www.gov.uk/bank-holidays.json"
-OUTPUT_DATE_FORMAT = "%b %d"
+ARGS_DATE_FORMAT = "%Y-%m-%d"
+OUTPUT_DATE_FORMAT = "%b %d %Y"
 
 
 
@@ -84,7 +86,15 @@ def list_holiday_data(args: dict) -> None:
             for event in region.events:
                 if event.bunting:
                     print(f"Region: {region.name} | Date: {event.date.strftime(OUTPUT_DATE_FORMAT)} | Holiday: {event.title}")
-    
+
+
+def valid_date_format(date:str) -> datetime:
+    """Custom type to validate dates for comparison."""
+    try:
+        return datetime.strptime(date, ARGS_DATE_FORMAT)
+    except ValueError:
+        msg = "Invalid date format; please use %Y-%m-%d."
+        raise argparse.ArgumentTypeError(msg)
         
 
 def parse_args() -> ArgumentParser:
@@ -101,6 +111,7 @@ def parse_args() -> ArgumentParser:
     parser_list = subparsers.add_parser("list", help="List information about UK Bank Holiday data.")
     parser_list.add_argument("--bunting", action="store_true", help="List all bunting holidays. If --region is not specified, list all bunting holiday for all regions.")
     parser_list.add_argument("-r", "--region", action="store", choices=["england-and-wales","scotland","northern-ireland"], help="Perform subcommand only for the specified region.")
+    parser_list.add_argument("--cutoff", action="store", type=valid_date_format, help="Set a cutoff date, before which no holidays will be listed. FORMAT: %Y-%m-%d")
     parser_list.set_defaults(func=list_holiday_data)
     
     return parser.parse_args()
