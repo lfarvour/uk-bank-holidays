@@ -25,3 +25,7 @@ __Structure of data retrieved from API:__ `json`
 * Date format is standard as YYYY-MM-DD
 * There may be notes; not clear if this is user defined
 * Bunting contains a boolean value; this will likely cause translation issues in Python due to capitalization in json bool vs python bool (true/false vs. True/False)
+
+## Initial implementation 
+
+* Rediscovered class decorators; @property finally clear! Used to enable accessing the value returned by the function as if it is a property. All thanks to Don, my senior dev and spouse.
