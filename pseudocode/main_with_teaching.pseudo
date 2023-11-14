@@ -17,6 +17,11 @@ def http_function(input:input_type) -> output_type:
 
 def main():
 
+    # Parse command line arguments
+
+    # Retrieve data
+    # Could check for a local file to read
+    # Could make an API call, as proposed below
     data = http_function(some_input)
 
 
